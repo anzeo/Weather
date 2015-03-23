@@ -14,8 +14,10 @@ angular.module("weather").provider("WeatherService", function(){
         service.getLocalWeatherForCity = getLocalWeatherForCity;
         return service;
 
-        function getLocalWeatherForCity(cityName){
-            return $http.get(endpoint + "weather?q=" + cityName);
+        function getLocalWeatherForCity(cityName, canceller){
+            return $http.get(endpoint + "weather?q=" + cityName, {
+                timeout: canceller
+            });
         }
     }
 });
