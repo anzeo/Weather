@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body ng-app="demo" ng-controller="WeatherController">
-    <weather of="Brussels"></weather>
+<body ng-app="demo" ng-controller="DemoCtrl">
+    <input ng-model="city">
+    <weather city="city"></weather>
     <script src="bower_components/angular/angular.js"></script>
     <script src="src/module.js"></script>
     <script src="src/services/WeatherServiceProvider.js"></script>
     <script src="src/services/WeatherServiceInterceptor.js"></script>
     <script src="src/controllers/WeatherController.js"></script>
+    <script src="src/directives/weather.js"></script>
     <script>
         angular.module("demo", ["weather"]).config(function(WeatherServiceProvider){
             WeatherServiceProvider.setApiEndpoint("http://api.openweathermap.org/data/2.5/");
+        }).controller('DemoCtrl', function(){
         });
     </script>
 </body>

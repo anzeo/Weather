@@ -1,6 +1,13 @@
-angular.module("weather").controller("WeatherController", function(WeatherService){
+angular.module("weather").controller("WeatherController", function($scope, WeatherService){
+    var controller = this;
 
-    WeatherService.getLocalWeatherForCity("Brussels").then(function(data){
-        console.log(data);
-    });
+    $scope.$watch('city', onCityChange);
+
+    function onCityChange(city){
+        WeatherService.getLocalWeatherForCity(city).then(function(data){
+            controller.data = data;
+        }, function(){
+            controller.data = undefined;
+        });
+    }
 });
