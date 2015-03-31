@@ -1,3 +1,15 @@
-<div>
-    {{WeatherController.data}}
+<div ng-show="WeatherController.location">
+    <h1 >{{WeatherController.location}} {{WeatherController.temperature}}
+        ({{WeatherController.temperatureUnit}})</h1>
+
+    <div>
+        Show temperature in: F
+        <md-switch ng-model="WeatherController.temperatureUnit" aria-label="Temperature unit" ng-true-value="'C'"
+                   ng-false-value="'F'"
+                   ng-change="WeatherController.showTemperatureIn(WeatherController.temperatureUnit)"
+                   class="weather-toggle-temperature">
+        </md-switch>
+        C
+    </div>
+    <md-progress-linear md-mode="determinate" ng-value="WeatherController.temperature"></md-progress-linear>
 </div>
