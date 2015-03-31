@@ -10,9 +10,13 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             'bower_components/angular/angular.js',
+            'bower_components/angular-animate/angular-animate.js',
+            'bower_components/angular-aria/angular-aria.js',
+            'bower_components/angular-material/angular-material.js',
             'node_modules/angular-mocks/angular-mocks.js',
             'src/module.js',
-            'src/**/*.js'
+            'src/**/*.js',
+            'specs/**/*Spec.js'
         ],
 
         // list of files to exclude
