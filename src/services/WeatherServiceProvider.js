@@ -5,7 +5,7 @@ angular.module("weather").provider("WeatherService", function(){
             apiEndpoint = endpoint;
         },
         $get: function ($http) {
-            return WeatherService($http, apiEndpoint);
+            return new WeatherService($http, apiEndpoint);
         }
     };
 
