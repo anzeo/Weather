@@ -17,6 +17,11 @@ angular.module("weather").provider("WeatherService", function(){
         function getLocalWeatherForCity(cityName, canceller){
             return $http.get(endpoint + "weather?q=" + cityName, {
                 timeout: canceller
+            }).then(function(data){
+                return {
+                    location: data.name,
+                    temperature: (parseFloat(data.main.temp) - 273.15).toFixed(2)
+                };
             });
         }
     }

@@ -1,6 +1,5 @@
 <div ng-show="WeatherController.location">
-    <h1 >{{WeatherController.location}} {{WeatherController.temperature}}
-        ({{WeatherController.temperatureUnit}})</h1>
+    <h1>{{WeatherController.location}} {{WeatherController.temperature}}({{WeatherController.temperatureUnit}})</h1>
 
     <div>
         Show temperature in: F
@@ -11,5 +10,4 @@
         </md-switch>
         C
     </div>
-    <md-progress-linear md-mode="determinate" ng-value="WeatherController.temperature"></md-progress-linear>
 </div>
