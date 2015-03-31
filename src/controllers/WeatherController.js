@@ -1,6 +1,6 @@
 angular.module("weather").controller("WeatherController", function ($scope, $q, WeatherService, TemperatureService) {
     var controller = this;
-    controller.showTemperatureIn = showTemperatureIn;
+    controller.toggleTemperatureUnit = toggleTemperatureUnit;
 
     $scope.$watch('city', onCityChange);
 
@@ -21,10 +21,11 @@ angular.module("weather").controller("WeatherController", function ($scope, $q, 
         });
     }
 
-    function showTemperatureIn(unit) {
-        if (unit === 'C') {
+    function toggleTemperatureUnit() {
+        controller.temperatureUnit = controller.temperatureUnit === 'C' ? 'F' : 'C';
+        if (controller.temperatureUnit === 'C') {
             controller.temperature = TemperatureService.convertToCelsius(controller.temperature);
-        } else if (unit === 'F') {
+        } else {
             controller.temperature = TemperatureService.convertToFahrenheit(controller.temperature);
         }
     }

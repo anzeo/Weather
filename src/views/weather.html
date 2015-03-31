@@ -1,13 +1,11 @@
 <div ng-show="WeatherController.location">
-    <h1>{{WeatherController.location}} {{WeatherController.temperature}}(&deg;{{WeatherController.temperatureUnit}})</h1>
+    <h1>{{WeatherController.location}}
+        {{WeatherController.temperature}}(&deg;{{WeatherController.temperatureUnit}})</h1>
 
-    <div>
-        Show temperature in: F
-        <md-switch ng-model="WeatherController.temperatureUnit" aria-label="Temperature unit" ng-true-value="'C'"
-                   ng-false-value="'F'"
-                   ng-change="WeatherController.showTemperatureIn(WeatherController.temperatureUnit)"
-                   class="weather-toggle-temperature">
-        </md-switch>
-        C
-    </div>
+    F <div class="switch" ng-click="WeatherController.toggleTemperatureUnit()"
+         ng-class="{on: WeatherController.temperatureUnit == 'F', off: WeatherController.temperatureUnit == 'C'}">
+        <div class="toggle"></div>
+        <span class="on"></span>
+        <span class="off"></span>
+    </div> C
 </div>

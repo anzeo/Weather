@@ -1,3 +1,3 @@
-angular.module("weather", ['ngMaterial']).config(function($httpProvider){
+angular.module("weather", []).config(function($httpProvider){
     $httpProvider.interceptors.push('WeatherServiceInterceptor');
 });
