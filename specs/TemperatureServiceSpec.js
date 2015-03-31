@@ -7,10 +7,11 @@ describe("The TemperatureService", function(){
     }));
 
     it("can convert a temperature in Celsius to Fahrenheit", function(){
-        expect(true).toBe(false);
+        expect(TemperatureService.convertToFahrenheit(100)).toBeCloseTo(212, 2);
     });
 
     it("can convert a temperature in Fahrenheit to Celsius", function(){
-        expect(true).toBe(false);
+        expect(TemperatureService.convertToCelsius(212)).toBeCloseTo(100, 2);
+
     });
 });
