@@ -3,11 +3,15 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
 </head>
 <body ng-app="demo" ng-controller="DemoCtrl">
     <input ng-model="city">
     <weather city="city"></weather>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="src/module.js"></script>
     <script src="src/services/WeatherServiceProvider.js"></script>
     <script src="src/services/WeatherServiceInterceptor.js"></script>
