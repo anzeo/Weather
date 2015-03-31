@@ -45,3 +45,4 @@ Temporary Items
 #Project specific
 .idea/
 bower_components
+node_modules
