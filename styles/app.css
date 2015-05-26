@@ -25,6 +25,10 @@ body {
     margin: 0 0.5em;
 }
 
+.weather-location img {
+    vertical-align: middle;
+}
+
 .weather-toggle {
     position: relative;
     display: block;

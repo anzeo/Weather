@@ -18,6 +18,7 @@
     <script>
         angular.module("demo", ["weather"]).config(function(WeatherServiceProvider){
             WeatherServiceProvider.setApiEndpoint("http://api.openweathermap.org/data/2.5/");
+            WeatherServiceProvider.setIconEndpoint("http://openweathermap.org/img/w/");
         }).controller('DemoCtrl', function(){
             this.city = "Brussels";
         });

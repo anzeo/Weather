@@ -18,7 +18,7 @@ describe("The WeatherController", function(){
         })
     }));
 
-    it("toggles between temperatue units", function(){
+    it("toggles between temperature units", function(){
         controller.temperatureUnit = "C";
 
         TemperatureService.expects("convertToFahrenheit").once();

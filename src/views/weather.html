@@ -1,6 +1,9 @@
-<div ng-show="WeatherController.location" class="weather-container">
-    <div class="weather-location">{{WeatherController.location}}</div>
-    <div class="weather-temperature">{{WeatherController.temperature}}&deg;</div>
+<div ng-show="WeatherController.data.location" class="weather-container">
+    <div class="weather-location">
+        {{WeatherController.data.location}}
+        <img src="{{WeatherController.data.iconUri}}">
+    </div>
+    <div class="weather-temperature">{{WeatherController.data.temperature}}&deg;</div>
 
     <div class="weather-toggle" ng-click="WeatherController.toggleTemperatureUnit()"
          ng-class="{left: WeatherController.temperatureUnit == 'F', right: WeatherController.temperatureUnit == 'C'}">
