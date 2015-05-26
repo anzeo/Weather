@@ -4,6 +4,11 @@ module.exports = function(grunt) {
         karma:  {
             unit: {
                 configFile: 'karma.conf.js'
+            },
+            debug: {
+                configFile: 'karma.conf.js',
+                singleRun: false,
+                browsers: ['Chrome']
             }
         },
         watch: {
@@ -15,6 +20,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-karma');
     //grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['karma']);
+    grunt.registerTask('default', ['karma:unit']);
 
 };
