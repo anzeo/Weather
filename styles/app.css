@@ -2,11 +2,12 @@
 
 body {
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-    font-size: 3em;
+
 }
 
 .weather-container {
     display: inline-block;
+    font-size: 3em;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     background-color: #22A7F0;
