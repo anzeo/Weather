@@ -1,6 +1,6 @@
 <div ng-show="WeatherController.location" class="weather-container">
-    <span class="weather-location">{{WeatherController.location}}</span>
-    <span class="weather-temperature">{{WeatherController.temperature}}(&deg;{{WeatherController.temperatureUnit}})</span>
+    <div class="weather-location">{{WeatherController.location}}</div>
+    <div class="weather-temperature">{{WeatherController.temperature}}&deg;</div>
 
     <div class="weather-toggle" ng-click="WeatherController.toggleTemperatureUnit()"
          ng-class="{left: WeatherController.temperatureUnit == 'F', right: WeatherController.temperatureUnit == 'C'}">
