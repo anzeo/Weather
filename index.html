@@ -7,6 +7,7 @@
 </head>
 <body ng-app="demo" ng-controller="DemoCtrl as vm">
     <div>
+        <label for="city">City:</label> <input name="city" ng-model="vm.city">
     </div>
     <weather city="vm.city"></weather>
     <script src="bower_components/angular/angular.js"></script>
