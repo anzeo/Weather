@@ -1,8 +1,8 @@
 angular.module('weather').service("TemperatureService", function(){
-    var service = this;
-    service.convertToFahrenheit = convertToFahrenheit;
-    service.convertToCelsius = convertToCelsius;
-    return service;
+    return {
+        convertToFahrenheit: convertToFahrenheit,
+        convertToCelsius: convertToCelsius
+    };
 
     function convertToFahrenheit(temperature){
         return (temperature * 1.8 + 32).toFixed(2);
