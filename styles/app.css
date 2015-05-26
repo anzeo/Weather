@@ -2,13 +2,25 @@ body {
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
 }
 
-.switch {
+.weather-container {
+    font-size: 1em;
+}
+
+.weather-location {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.weather-temperature {
+    color: #ccc;
+}
+
+.weather-toggle {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    font-size: 1.6em;
+    font-size: 1em;
     font-weight: bold;
-    color: #ccc;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
     height: 18px;
     padding: 6px 6px 5px 6px;
@@ -23,13 +35,13 @@ body {
     user-select: none;
 }
 
-.switch span {
+.weather-toggle span {
     display: inline-block;
     width: 35px;
     text-align: center;
 }
 
-.switch .toggle {
+.weather-toggle .handle {
     position: absolute;
     top: 1px;
     width: 37px;
@@ -43,10 +55,10 @@ body {
     transition: all 0.15s ease-in-out;
 }
 
-.switch.on .toggle {
+.weather-toggle.left .handle {
     left: 2%;
 }
 
-.switch.off .toggle {
+.weather-toggle.right .handle {
     left: 54%;
 }
