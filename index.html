@@ -5,9 +5,9 @@
     <title></title>
     <link rel="stylesheet" href="styles/app.css">
 </head>
-<body ng-app="demo" ng-controller="DemoCtrl">
-    <input ng-model="city">
-    <weather city="city"></weather>
+<body ng-app="demo" ng-controller="DemoCtrl as vm">
+    <input ng-model="vm.city">
+    <weather city="vm.city"></weather>
     <script src="bower_components/angular/angular.js"></script>
     <script src="src/module.js"></script>
     <script src="src/services/WeatherServiceProvider.js"></script>
