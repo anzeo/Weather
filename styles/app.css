@@ -1,12 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 body {
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
     font-size: 3em;
 }
 
 .weather-container {
-    border: 1px solid black;
     display: inline-block;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
+    background-color: #22A7F0;
+    color: white;
 }
 
 .weather-temperature {
@@ -16,20 +20,18 @@ body {
 }
 
 .weather-location {
-    color: #ccc;
+    color: rgba(255,255,255,0.75);
     text-transform: uppercase;
-    margin: 0 5px;
+    margin: 0 0.5em;
 }
 
 .weather-toggle {
     position: relative;
     display: block;
     font-weight: bold;
-    color: #CCC;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
     width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    background: #ececec;
+    background: rgba(0,0,0,0.25);
     cursor: pointer;
     font-size: 0;
 
@@ -41,7 +43,8 @@ body {
 
 .weather-toggle span {
     display: inline-block;
-    width: 50%;
+    width: 40%;
+    margin: 0.2em 5%;
     font-size: 2rem;
     height: 2em;
     line-height: 2em;
@@ -49,6 +52,6 @@ body {
 
 .weather-toggle.left .left, .weather-toggle.right .right {
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 0.5em 0.01em rgba(0,0,0,0.3);
     color: white;
+    border-radius: 0.1em;
 }
